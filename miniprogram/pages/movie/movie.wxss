@@ -1,0 +1,40 @@
+/* pages/movie/movie.wxss */
+.movie{
+  display: flex;
+  padding: 10rpx 10rpx 20rpx 10rpx;
+  border-bottom: 1px solid #ccc;
+}
+
+.movie-img {
+  width: 200rpx;
+  height: 300rpx;
+  margin-right: 10rpx;
+}
+
+.movie-info {
+  flex: 1;
+  position: relative;
+}
+
+.movie-title {
+  color: #669;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 40rpx;
+  font-weight: bolder;
+  margin-bottom: 10rpx;
+}
+
+.movie-actor {
+  color: #666;
+  font-size: 34rpx;
+}
+
+.movie-rank {
+  color: #e09015;
+  font-size: 34rpx;
+}
+
+.movie-comment {
+  position: absolute;
+  bottom: 0;
+}

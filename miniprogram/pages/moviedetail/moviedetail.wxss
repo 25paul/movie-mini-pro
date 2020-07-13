@@ -1,0 +1,28 @@
+/* pages/moviedetail/moviedetail.wxss */
+
+.detail {
+  padding: 10rpx;
+}
+
+.detail-content{
+  display: flex;
+}
+
+.detail-image {
+  width: 200rpx;
+  height: 300rpx;
+  margin-right: 10rpx;
+}
+
+.detail-info {
+  flex: 1;
+}
+
+.detail-summary {
+  font-size: 28rpx;
+}
+
+.upload-image {
+  width: 180rpx;
+  height: 180rpx;
+}

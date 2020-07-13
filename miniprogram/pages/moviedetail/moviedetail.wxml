@@ -1,0 +1,38 @@
+<!--pages/moviedetail/moviedetail.wxml-->
+<view class="detail">
+  <view class="detail-content">
+    <image class="detail-image" src="{{moviedetail.images.large}}"></image>
+    <view class="detail-info">
+      <view class="detail-title">{{moviedetail.title}}</view>
+      <view class="detail-entitle">{{moviedetail.original_title}}</view>
+      <view class="detail-score">{{moviedetail.rating.average}}</view>
+      <view class="detail-country">
+        <text wx:for="{{moviedetail.countries}}" wx:key="{{index}}">{{item}}</text>
+      </view>
+      <view class="pdetail-director">
+        导演：
+        <text wx:for="{{moviedetail.directors}}" wx:key="{{index}}">{{item.name}}</text>
+      </view>
+    </view>
+  </view>
+
+  <view class="detail-summary">{{moviedetail.summary}}</view>
+
+  <view>
+    <van-field
+    value="{{ fieldcon }}"
+    placeholder="请输入评论"
+    border="{{ false }}"
+    bind:change="onfieldChange"
+  />
+
+    <van-rate value="{{ ratecon }}" bind:change="onrateChange" />
+
+    <view><van-button type="info" bindtap="uploadimg">上传图片</van-button></view>
+    <view>
+      <image class="upload-image" wx:for="{{images}}" src="{{item}}"></image>
+    </view>
+
+    <van-button type="warning" bindtap="onsubmit">提交</van-button>
+  </view>
+</view>

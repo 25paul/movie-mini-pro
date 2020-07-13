@@ -1,0 +1,12 @@
+<!--pages/movie/movie.wxml-->
+<view class="movie" wx:for="{{movielists}}" wx:key="*this">
+  <image class="movie-img" src="{{item.images.large}}"></image>
+  <view class="movie-info">
+    <view class="movie-title">{{item.title}}</view>
+    <view class="movie-actor">主演：
+      <text wx:for="{{item.casts}}" wx:key="unique">{{item.name}} </text>
+    </view>
+    <view class="movie-rank">评分：{{item.rating.average}}</view>
+    <van-button bindtap="gotodetail" data-movieid = "{{item.id}}" class="movie-comment" type="danger">点击评价</van-button>
+  </view>
+</view>
